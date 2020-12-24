@@ -56,28 +56,6 @@ The next step in our process is to build a model. We use a simple feedforward ne
 | Occupancy | 5.07% |
 
 
-<script>
-function eval(){
-  var res=eval_network([
-    Number(document.getElementById("query-Units-value").value)/573,
-    Number(document.getElementById("query-#_Bedrooms-value").value)/4,
-    Number(document.getElementById("query-Size-value").value)/1751,
-    Number(document.getElementById("query-#_Bathrooms-value").value)/3,
-    87123/87123,
-    2011/2011
-  ]);
-  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$7.36";
-  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% +/-4.14%";
-}
-
-
-function eval_network(input) {
-return [1/(1+1/Math.exp(-1.1167824268341064+0.6776214838027954*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.9796710014343262*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+2.587534189224243*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5'])))))),1/(1+1/Math.exp(1.8970402479171753+0.8099343776702881*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.7818050384521484*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+0.4910190999507904*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5']))))))]
-}
-
-eval();
-</script>
-
 ## Query Model:
 <div id="query-inputs">
 <label>Units:
@@ -110,6 +88,30 @@ eval();
 <p id="occupancy-value">Occupancy: </p>
 </b>
 </div>
+
+
+
+<script>
+function eval(){
+  var res=eval_network([
+    Number(document.getElementById("query-Units-value").value)/573,
+    Number(document.getElementById("query-#_Bedrooms-value").value)/4,
+    Number(document.getElementById("query-Size-value").value)/1751,
+    Number(document.getElementById("query-#_Bathrooms-value").value)/3,
+    87123/87123,
+    2011/2011
+  ]);
+  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$7.36";
+  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% +/-4.14%";
+}
+
+
+function eval_network(input) {
+return [1/(1+1/Math.exp(-1.1167824268341064+0.6776214838027954*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.9796710014343262*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+2.587534189224243*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5'])))))),1/(1+1/Math.exp(1.8970402479171753+0.8099343776702881*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.7818050384521484*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+0.4910190999507904*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5']))))))]
+}
+
+eval();
+</script>
 
 ## Results and Future Work:
 The generated model has great accuracy for the required task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. 
