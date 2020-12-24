@@ -40,7 +40,7 @@ We then use a correlation matrix to confirm our visual suspicions:
 | ZIP	| 100% | 100% |
 | Age |	100% |	100% |
 
-The correlation matrix reflects what we learned from visualizing the data, but also brings up an alarming feature- both the zip code and age of the apartment complex are both highly correlated with rent and occupancy. Further inspection reveals that due to the sparse data, most zip codes and ages are unique, which explains the high correlation.
+The correlation matrix reflects what we learned from visualizing the data, but also brings up an alarming feature- both the zip code and age of the apartment complex are both highly correlated with rent and occupancy. Further inspection reveals that due to the sparse data, most zip codes and ages are unique, which explains the high correlation. We will remove these features, as it is unlikely they will generalize well to new sample data.
 
 ## Model Building and Analysis
 The next step in our process is to build a model
@@ -53,8 +53,8 @@ function eval(){
     Number(document.getElementById("query-#_Bedrooms-value").value)/4,
     Number(document.getElementById("query-Size-value").value)/1751,
     Number(document.getElementById("query-#_Bathrooms-value").value)/3,
-    Number(document.getElementById("query-ZIP-value").value)/87123,
-    Number(document.getElementById("query-Age-value").value)/2011
+    87123/87123,
+    2011/2011
   ]);
   document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" (+/- $7.36 | 4.87% Absolute Error)";
   document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% (+/- 4.14% | 5.07% Absolute Error)";
@@ -90,21 +90,14 @@ eval();
 <input type="number" id="query-#_Bathrooms" class="query-input" value="2" onchange="document.getElementById('query-#_Bathrooms-value').value=this.value;">
 </label><br>
         
-<label>ZIP:
-<input id="query-ZIP-value" type="range" min="87048" max="87123" step="0.01" value="87085.5" onchange="document.getElementById('query-ZIP').value=this.value;">
-<input type="number" id="query-ZIP" class="query-input" value="87085.5" onchange="document.getElementById('query-ZIP-value').value=this.value;">
-</label><br>
-        
-<label>Age:
-<input id="query-Age-value" type="range" min="2" max="2011" step="0.01" value="1006.5" onchange="document.getElementById('query-Age').value=this.value;">
-<input type="number" id="query-Age" class="query-input" value="1006.5" onchange="document.getElementById('query-Age-value').value=this.value;">
-</label><br>
+
 <button onclick="eval();">Run Query</button>
 <p id="rent-value">Rent: </p>
 <p id="occupancy-value">Occupancy: </p>
 </div>
 
 ## Results and Future Work:
-The generated model has good accuracy for the task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets.
+The generated model has good accuracy for the task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. Generalizing the model has the following behavior:
+
 
 It would also be interesting to include a single image in the process, to try and qunatify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
