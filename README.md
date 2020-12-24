@@ -10,6 +10,7 @@ We also remove features such as the apartment complex name, sub market, etc as t
 Here are the statistics for each feature:
 
 | Feature	| Mean | Median | Mode | Minimum | Maximum | Standard Deviation |
+| --- | --- | --- | --- | --- | --- | --- |
 | Units | 209.2893 | 77 | 240 | 46 | 573 |	114.4006 |
 | Bedrooms | 1.6309 | 2 | 2 | 1 | 4 | 0.7115 |
 | Size | 854.8595 | 840 | 800 | 109 |1751 | 271.1651 |
