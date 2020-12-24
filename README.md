@@ -90,8 +90,9 @@ eval();
 <input type="number" id="query-#_Bathrooms" class="query-input" value="2" onchange="document.getElementById('query-#_Bathrooms-value').value=this.value;">
 </label><br>
         
-
+<br>
 <button onclick="eval();">Run Query</button>
+<br>
 <b>
 <p id="rent-value">Rent: </p>
 </b>
