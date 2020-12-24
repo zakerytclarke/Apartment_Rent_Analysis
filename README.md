@@ -114,6 +114,6 @@ eval();
 </script>
 
 ## Results and Future Work:
-The generated model has great accuracy for the predicting rent prices, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. 
+The generated model has great accuracy for the predicting rent prices, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. More data would likely make location information more relevant in the model, which we know to be correlated with price.
 
 It would also be interesting to include a single image of the proeprty in the pipeline, to try and quantify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
