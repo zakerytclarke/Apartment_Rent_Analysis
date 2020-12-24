@@ -101,3 +101,8 @@ return [1/(1+1/Math.exp(-1.1167824268341064+0.6776214838027954*(1/(1+1/Math.exp(
 <p id="rent-value">Rent: </p>
 <p id="occupancy-value">Occupancy: </p>
 </div>
+
+## Results and Future Work:
+The generated model has good accuracy for the task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets.
+
+It would also be interesting to include a single image in the process, to try and qunatify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
