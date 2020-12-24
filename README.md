@@ -48,7 +48,7 @@ We then use a correlation matrix to confirm our visual suspicions:
 The correlation matrix reflects what we learned from visualizing the data, but also brings up an alarming feature- both the zip code and age of the apartment complex are both highly correlated with rent and occupancy. Further inspection reveals that due to the sparse data, most zip codes and ages are unique, which explains the high correlation. We will remove these features, as it is unlikely they will generalize well to new sample data.
 
 ## Model Building and Analysis
-The next step in our process is to build a model. We use a simple feedforward network with a small number of hidden layers. Data is normalized to prevent training errors. Evaluation on the test dataset revealed the following errors:
+The next step in our process is to build a model. We use a simple feedforward network with a small number of hidden layers. Data is normalized to prevent training errors. Initial results were promising, but using a gradient boosting technique and hyperparameter tuning lowered the error of our model. Evaluation on the test dataset revealed the following errors:
 
 | Feature | Mean Percent Absolute Error |
 | --- | --- |
@@ -114,6 +114,6 @@ eval();
 </script>
 
 ## Results and Future Work:
-The generated model has great accuracy for predicting rent prices, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. More data would likely make location information more relevant in the model, which we know to be correlated with price.
+The generated model has great accuracy for predicting rent prices, with an acceptable error rate. The main issue with the current model centers around the lack of market data. The model could be improved with more data points and extended to other areas and markets. More data would likely make location information more relevant in the model, which we know to be correlated with price.
 
 It would also be interesting to include a single image of the proeprty in the pipeline, to try and quantify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
