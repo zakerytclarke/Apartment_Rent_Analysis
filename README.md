@@ -44,10 +44,13 @@ The correlation matrix reflects what we learned from visualizing the data, but a
 
 ## Model Building and Analysis
 The next step in our process is to build a model. We use a simple feedforward network with a small number of hidden layers. Data is normalized to prevent training errors. Evaluation on the test dataset revealed the following errors:
+
 | Feature | Mean Percent Absolute Error |
 | --- | --- |
 | Rent | 4.87%  |
 | Occupancy | 5.07% |
+
+
 <script>
 function eval(){
   var res=eval_network([
