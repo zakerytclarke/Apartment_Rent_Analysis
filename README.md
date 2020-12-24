@@ -37,22 +37,22 @@ The next step in our process is to build a model
 
 ## Query Model:
 
-        <label>Units:
-        <input id="query-Units-value" type="range" min="46" max="573" step="0.01" value="309.5" onchange="document.getElementById('query-Units').value=this.value;">
-        <input type="number" id="query-Units" class="query-input" value="309.5" onchange="document.getElementById('query-Units-value').value=this.value;">
-        </label><br>
+<label>Units:
+<input id="query-Units-value" type="range" min="46" max="573" step="0.01" value="309.5" onchange="document.getElementById('query-Units').value=this.value;">
+<input type="number" id="query-Units" class="query-input" value="309.5" onchange="document.getElementById('query-Units-value').value=this.value;">
+</label><br>
         
-        <label>#_Bedrooms:
-        <input id="query-#_Bedrooms-value" type="range" min="1" max="4" step="0.01" value="2.5" onchange="document.getElementById('query-#_Bedrooms').value=this.value;">
-        <input type="number" id="query-#_Bedrooms" class="query-input" value="2.5" onchange="document.getElementById('query-#_Bedrooms-value').value=this.value;">
-        </label><br>
+<label>#_Bedrooms:
+<input id="query-#_Bedrooms-value" type="range" min="1" max="4" step="0.01" value="2.5" onchange="document.getElementById('query-#_Bedrooms').value=this.value;">
+<input type="number" id="query-#_Bedrooms" class="query-input" value="2.5" onchange="document.getElementById('query-#_Bedrooms-value').value=this.value;">
+</label><br>
         
-        <label>Size:
-        <input id="query-Size-value" type="range" min="109" max="1751" step="0.01" value="930" onchange="document.getElementById('query-Size').value=this.value;">
-        <input type="number" id="query-Size" class="query-input" value="930" onchange="document.getElementById('query-Size-value').value=this.value;">
-        </label><br>
+<label>Size:
+<input id="query-Size-value" type="range" min="109" max="1751" step="0.01" value="930" onchange="document.getElementById('query-Size').value=this.value;">
+<input type="number" id="query-Size" class="query-input" value="930" onchange="document.getElementById('query-Size-value').value=this.value;">
+</label><br>
         
-        <label>#_Bathrooms:
-        <input id="query-#_Bathrooms-value" type="range" min="1" max="3" step="0.01" value="2" onchange="document.getElementById('query-#_Bathrooms').value=this.value;">
-        <input type="number" id="query-#_Bathrooms" class="query-input" value="2" onchange="document.getElementById('query-#_Bathrooms-value').value=this.value;">
-        </label><br>
+<label>#_Bathrooms:
+<input id="query-#_Bathrooms-value" type="range" min="1" max="3" step="0.01" value="2" onchange="document.getElementById('query-#_Bathrooms').value=this.value;">
+<input type="number" id="query-#_Bathrooms" class="query-input" value="2" onchange="document.getElementById('query-#_Bathrooms-value').value=this.value;">
+</label><br>
