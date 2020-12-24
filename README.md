@@ -1,6 +1,6 @@
 # Predicting Rent Prices in Albuquerque Metropolitan Area
 ## Project Goals
-Contracted to analyze apartment metrics to build a model to predict rent prices and apartment occupancy from relevant features. Data will be used to competetively price apartment rent and predict occupancy for profit analysis. Resulted in a model with less than 1% error rate using ensemble machine learning methods.
+Contracted to analyze apartment metrics to build a model to predict rent prices and apartment occupancy from relevant features. Data will be used to competetively price apartment rent and predict occupancy for profit analysis. Resulted in a model with less than 5% error rate using ensemble machine learning methods.
 
 ## Data Cleaning
 The first step in the data analysis was to examine the data. There were many missing or incorrect values, so we replaced invalid entires with either the mean or mode, depending on the specific feature. This was done to improve the quality of the dataset, without removing rows from an already sparse data source.
@@ -43,9 +43,11 @@ We then use a correlation matrix to confirm our visual suspicions:
 The correlation matrix reflects what we learned from visualizing the data, but also brings up an alarming feature- both the zip code and age of the apartment complex are both highly correlated with rent and occupancy. Further inspection reveals that due to the sparse data, most zip codes and ages are unique, which explains the high correlation. We will remove these features, as it is unlikely they will generalize well to new sample data.
 
 ## Model Building and Analysis
-The next step in our process is to build a model
-
-
+The next step in our process is to build a model. We use a simple feedforward network with a small number of hidden layers. Data is normalized to prevent training errors. Evaluation on the test dataset revealed the following errors:
+| Feature | Mean Percent Absolute Error |
+| --- | --- |
+| Rent | 4.87%  |
+| Occupancy | 5.07% |
 <script>
 function eval(){
   var res=eval_network([
@@ -56,8 +58,8 @@ function eval(){
     87123/87123,
     2011/2011
   ]);
-  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" (+/- $7.36 | 4.87% Absolute Error)";
-  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% (+/- 4.14% | 5.07% Absolute Error)";
+  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$7.36";
+  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% +/-4.14%";
 }
 
 
