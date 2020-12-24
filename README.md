@@ -16,6 +16,7 @@ As you can see, the size of a unit and the number of bedrooms (and bathrooms) ar
 Interestingly enough, the number of units in an apartment complex is negatively correlated with occupancy. This is likely due to large apartment complexes having longer occupancy between renters.
 
 We then use a correlation matrix to confirm our visual suspicions:
+
 | Feature | Rent | Occupancy 
 | --- | --- | --- |
 | Units | 9% |	-22%
@@ -32,9 +33,6 @@ The next step in our process is to build a model
 
 
 <script>
-  alert('hi');
-
-  
 function eval(){
   var res=eval_network([
     document.getElementById("query-Units-value").value,
@@ -45,6 +43,8 @@ function eval(){
     document.getElementById("query-Age-value").value
   ]);
   alert(res);
+  document.getElementById("rent-value").innerHTML="Rent: $"+res[0]+" (+/- $7.36 | 4.87% Absolute Error)";
+  document.getElementById("occupancy-value").innerHTML="Occupancy: $"+res[0]+" (+/- 4.14% | 5.07% Absolute Error)";
 }
 
 
@@ -84,4 +84,7 @@ return [1/(1+1/Math.exp(-1.1167824268341064+0.6776214838027954*(1/(1+1/Math.exp(
 <input id="query-Age-value" type="range" min="2" max="2011" step="0.01" value="1006.5" onchange="document.getElementById('query-Age').value=this.value;">
 <input type="number" id="query-Age" class="query-input" value="1006.5" onchange="document.getElementById('query-Age-value').value=this.value;">
 </label><br>
+<button onclick="eval();">Run Query</button>
+<p id="rent-value">Rent: </p>
+<p id="occupancy-value">Occupancy: </p>
 </div>
