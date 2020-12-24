@@ -24,7 +24,7 @@ Here are the statistics for each feature:
 ## Data Visualization 
 The data then needed to be visualized to examine given features and their relationship to our two output features- rent and occupancy. The graphs found below start telling the story of our data:
 
-<img src="https://zclarke.dev/Apartment_Rent_Analysis/bedrooms_vs_rent.png" style="width:40%;"/>
+<img src="https://zclarke.dev/Apartment_Rent_Analysis/bedrooms_vs_rent.png" style="width:40vw;"/>
 
 <img src="https://zclarke.dev/Apartment_Rent_Analysis/size_vs_rent.png" style="width:40%;"/>
 
