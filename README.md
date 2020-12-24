@@ -92,12 +92,16 @@ eval();
         
 
 <button onclick="eval();">Run Query</button>
+<b>
 <p id="rent-value">Rent: </p>
+</b>
+<b>
 <p id="occupancy-value">Occupancy: </p>
+</b>
 </div>
 
 ## Results and Future Work:
-The generated model has good accuracy for the task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. Generalizing the model has the following behavior:
+The generated model has great accuracy for the required task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. Generalizing the model has the following behavior:
 
 
 It would also be interesting to include a single image in the process, to try and qunatify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
