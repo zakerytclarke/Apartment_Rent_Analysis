@@ -21,7 +21,7 @@ Here are the statistics for each feature:
 | Age | 1820.5799 | 1965 | null | 2 | 2011 | 196.1572 |
 
 
-## Data Visualization 
+## Data Visualization & Analysis
 The data then needed to be visualized to examine given features and their relationship to our two output features- rent and occupancy. The graphs found below start telling the story of our data:
 
 <img src="https://zclarke.dev/Apartment_Rent_Analysis/bedrooms_vs_rent.png" style="width:40%; display:inline-block; text-align:center; margin-left:20vw;"/>
