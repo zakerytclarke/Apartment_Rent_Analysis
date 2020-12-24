@@ -102,7 +102,7 @@ function eval(){
     2011/2011
   ]);
   document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$7.36";
-  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% +/-4.14%";
+  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*110).toFixed(2)+"% +/-4.14%";
 }
 
 
@@ -114,6 +114,6 @@ eval();
 </script>
 
 ## Results and Future Work:
-The generated model has great accuracy for the required task, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. 
+The generated model has great accuracy for the predicting rent prices, with an acceptable error rate. The model could be improved with more data points and extended to other areas and markets. 
 
 It would also be interesting to include a single image in the pipeline, to try and qunatify the aesthetic value of the property. This could be trained using the same network with a convolutional neural network used to downsample features of the image into an input vector.
