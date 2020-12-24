@@ -15,7 +15,7 @@ Here are the statistics for each feature:
 | Bedrooms | 1.6309 | 2 | 2 | 1 | 4 | 0.7115 |
 | Size | 854.8595 | 840 | 800 | 109 |1751 | 271.1651 |
 | Bathrooms | 1.3795 |	1 |	1 |	1 |	3 | 0.4931 |
-| Rent | $601.04 | $715 | 599 | $310 | $999 | $152.82 |
+| Rent | $601.04 | $715 | $599 | $310 | $2,437 | $152.82 |
 | Occupancy | 89.3106% | 100% | 100 | 36% | 100% | 9.0944% |
 | Zip Code | 67671.6736 | 87111 | null | 87048 | 87123 | 17132.2395 |
 | Age | 1820.5799 | 1965 | null | 2 | 2011 | 196.1572 |
@@ -49,16 +49,15 @@ The next step in our process is to build a model
 <script>
 function eval(){
   var res=eval_network([
-    document.getElementById("query-Units-value").value,
-    document.getElementById("query-#_Bedrooms-value").value,
-    document.getElementById("query-Size-value").value,
-    document.getElementById("query-#_Bathrooms-value").value,
-    document.getElementById("query-ZIP-value").value,
-    document.getElementById("query-Age-value").value
+    Number(document.getElementById("query-Units-value").value)/573,
+    Number(document.getElementById("query-#_Bedrooms-value").value)/4,
+    Number(document.getElementById("query-Size-value").value)/1751,
+    Number(document.getElementById("query-#_Bathrooms-value").value)/3,
+    Number(document.getElementById("query-ZIP-value").value)/87123,
+    Number(document.getElementById("query-Age-value").value)/2011
   ]);
-  alert(res);
-  document.getElementById("rent-value").innerHTML="Rent: $"+res[0]+" (+/- $7.36 | 4.87% Absolute Error)";
-  document.getElementById("occupancy-value").innerHTML="Occupancy: $"+res[0]+" (+/- 4.14% | 5.07% Absolute Error)";
+  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*2437).toFixed(2)+" (+/- $7.36 | 4.87% Absolute Error)";
+  document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*100).toFixed(2)+"% (+/- 4.14% | 5.07% Absolute Error)";
 }
 
 
