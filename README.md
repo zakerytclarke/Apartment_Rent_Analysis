@@ -7,6 +7,19 @@ The first step in the data analysis was to examine the data. There were many mis
 
 We also remove features such as the apartment complex name, sub market, etc as they do not have any relationship with our predictors.
 
+Here are the statistics for each feature:
+
+| Feature	| Mean | Median | Mode | Minimum | Maximum | Standard Deviation |
+| Units | 209.2893 | 77 | 240 | 46 | 573 |	114.4006 |
+| Bedrooms | 1.6309 | 2 | 2 | 1 | 4 | 0.7115 |
+| Size | 854.8595 | 840 | 800 | 109 |1751 | 271.1651 |
+| Bathrooms | 1.3795 |	1 |	1 |	1 |	3 | 0.4931 |
+| Rent | $601.04 | $715 | 599 | $310 | $999 | $152.82 |
+| Occupancy | 89.3106% | 100% | 100 | 36% | 100% | 9.0944% |
+| Zip Code | 67671.6736 | 87111 | null | 87048 | 87123 | 17132.2395 |
+| Age | 1820.5799 | 1965 | null | 2 | 2011 | 196.1572 |
+
+
 ## Data Visualization 
 The data then needed to be visualized to examine given features and their relationship to our two output features- rent and occupancy. The graphs found below start telling the story of our data:
 
