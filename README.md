@@ -24,11 +24,11 @@ Here are the statistics for each feature:
 ## Data Visualization 
 The data then needed to be visualized to examine given features and their relationship to our two output features- rent and occupancy. The graphs found below start telling the story of our data:
 
-<img src="https://zclarke.dev/Apartment_Rent_Analysis/bedrooms_vs_rent.png" />
+<img src="https://zclarke.dev/Apartment_Rent_Analysis/bedrooms_vs_rent.png" style="widht:40%;"/>
 
-<img src="https://zclarke.dev/Apartment_Rent_Analysis/size_vs_rent.png" />
+<img src="https://zclarke.dev/Apartment_Rent_Analysis/size_vs_rent.png" style="widht:40%;"/>
 
-<img src="https://zclarke.dev/Apartment_Rent_Analysis/units_vs_occupancy.png" />
+<img src="https://zclarke.dev/Apartment_Rent_Analysis/units_vs_occupancy.png" style="widht:40%;" />
 
 As you can see, the size of a unit and the number of bedrooms (and bathrooms) are positively correlated with the rent. This intuitively makes sense, as we expect large apartments with more amenities to be more expensive.
 
