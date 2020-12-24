@@ -33,10 +33,28 @@ The next step in our process is to build a model
 
 <script>
   alert('hi');
+
+  
+function eval(){
+  var res=eval_network([
+    document.getElementById("query-Units-value").value,
+    document.getElementById("query-#_Bedrooms-value").value,
+    document.getElementById("query-Size-value").value,
+    document.getElementById("query-#_Bathrooms-value").value,
+    document.getElementById("query-ZIP-value").value,
+    document.getElementById("query-Age-value").value
+  ]);
+  alert(res);
+}
+
+
+function eval_network(input) {
+return [1/(1+1/Math.exp(-1.1167824268341064+0.6776214838027954*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.9796710014343262*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+2.587534189224243*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5'])))))),1/(1+1/Math.exp(1.8970402479171753+0.8099343776702881*(1/(1+1/Math.exp(-0.16549286246299744-0.13924993574619293*(input['0'])+0.2398795783519745*(input['1'])+0.7668423652648926*(input['2'])+0.48436564207077026*(input['3'])-0.14080971479415894*(input['4'])-0.2665686309337616*(input['5']))))+0.7818050384521484*(1/(1+1/Math.exp(-0.3486810028553009-0.11443651467561722*(input['0'])+0.4584387242794037*(input['1'])+0.9023691415786743*(input['2'])+0.600862979888916*(input['3'])-0.10812544822692871*(input['4'])-0.4033713638782501*(input['5']))))+0.4910190999507904*(1/(1+1/Math.exp(-0.6857099533081055+0.2552834153175354*(input['0'])+1.1110868453979492*(input['1'])+2.0022220611572266*(input['2'])+1.0924711227416992*(input['3'])-0.7244277596473694*(input['4'])-0.7303528785705566*(input['5']))))))]
+}
 </script>
 
 ## Query Model:
-
+<div id="query-inputs">
 <label>Units:
 <input id="query-Units-value" type="range" min="46" max="573" step="0.01" value="309.5" onchange="document.getElementById('query-Units').value=this.value;">
 <input type="number" id="query-Units" class="query-input" value="309.5" onchange="document.getElementById('query-Units-value').value=this.value;">
@@ -56,3 +74,14 @@ The next step in our process is to build a model
 <input id="query-#_Bathrooms-value" type="range" min="1" max="3" step="0.01" value="2" onchange="document.getElementById('query-#_Bathrooms').value=this.value;">
 <input type="number" id="query-#_Bathrooms" class="query-input" value="2" onchange="document.getElementById('query-#_Bathrooms-value').value=this.value;">
 </label><br>
+        
+<label>ZIP:
+<input id="query-ZIP-value" type="range" min="87048" max="87123" step="0.01" value="87085.5" onchange="document.getElementById('query-ZIP').value=this.value;">
+<input type="number" id="query-ZIP" class="query-input" value="87085.5" onchange="document.getElementById('query-ZIP-value').value=this.value;">
+</label><br>
+        
+<label>Age:
+<input id="query-Age-value" type="range" min="2" max="2011" step="0.01" value="1006.5" onchange="document.getElementById('query-Age').value=this.value;">
+<input type="number" id="query-Age" class="query-input" value="1006.5" onchange="document.getElementById('query-Age-value').value=this.value;">
+</label><br>
+</div>
