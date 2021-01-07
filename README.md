@@ -101,7 +101,7 @@ function eval(){
     87123/87123,
     2011/2011
   ]);
-  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$7.36";
+  document.getElementById("rent-value").innerHTML="Rent: $"+(res[0]*999).toFixed(2)+" +/-$32.43";
   document.getElementById("occupancy-value").innerHTML="Occupancy: "+(res[0]*110).toFixed(2)+"% +/-4.14%";
 }
 
